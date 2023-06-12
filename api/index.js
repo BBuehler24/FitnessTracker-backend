@@ -60,9 +60,9 @@ apiRouter.use('/', (req, res, next) => {
 
 apiRouter.use((error, req, res, next) => {
   res.status(401).send({
-    error: 'Error',
+    name: error.name,
     message: error.message,
-    name: error.name
+    error: 'Error'
   });
 });
 
