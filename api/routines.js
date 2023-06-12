@@ -41,8 +41,8 @@ routinesRouter.post('/', async (req, res, next) => {
       res.send(addedRoutine);
     } else {
       next({
-        message: 'You must be logged in to perform this action',
-        name: 'NotLoggedIn'
+        name: 'NotLoggedIn',
+        message: 'You must be logged in to perform this action'
       });
     }
   } catch (error) {
@@ -75,8 +75,8 @@ routinesRouter.patch('/:routineId', async (req, res, next) => {
       res.send(revisedRoutine);
     } else {
       next({
-        message: 'You must be logged in to perform this action',
         name: 'NotLoggedIn',
+        message: 'You must be logged in to perform this action'
       });
     }
   } catch (error) {
